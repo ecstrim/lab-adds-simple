@@ -10,7 +10,7 @@ Azure Resource Manager (ARM) templates are pre-configured prescriptive deploymen
 
 | Template                     | Name                                                    | Description
 | :-------------------         | :-------------------                                    | :-------------------
-| [tlg-base-config_3-vm](https://github.com/maxskunkworks/TLG/tree/master/tlg-base-config_3-vm) [<img src="http://azuredeploy.net/deploybutton.png">](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fmaxskunkworks%2Ftlg%2Fmaster%2Ftlg-base-config_3-vm%2Fazuredeploy.json)        | 3 VM Base Configuration | This template deploys the **3 VM Base Configuration** base configuration that represents a simplified intranet connected to the Internet. This base configuration is the starting point for additional TLGs that can be found [here](http://aka.ms/catlgs).
+| [tlg-base-config_3-vm](https://github.com/ecstrim/lab-adds-simple) [<img src="http://azuredeploy.net/deploybutton.png">](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fecstrim%2Ftlg%2Fmaster%2Fazuredeploy.json)        | 3 VM Base Configuration | This template deploys the **3 VM Base Configuration** base configuration that represents a simplified intranet connected to the Internet. This base configuration is the starting point for additional TLGs that can be found [here](http://aka.ms/catlgs).
 
 
 ## Prerequisites

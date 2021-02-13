@@ -18,7 +18,7 @@
       "value": ""
     },
     "deployClientVM": {
-      "value": "yes"
+      "value": "No"
     },
     "clientVhdUri": {
       "value": "yes"

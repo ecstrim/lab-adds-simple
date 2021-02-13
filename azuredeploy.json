@@ -1,5 +1,5 @@
 {
-  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
   "parameters": {
     "configName": {
@@ -7,14 +7,14 @@
       "metadata": {
         "description": "The name of the deployment, i.e. BaseConfig01. Do not use spaces or special characters other than _ or -. Used to concatenate resource names for the deployment."
       },
-      "defaultValue": "TlgBaseConfig-01"
+      "defaultValue": "ADDS_LAB_BaseConfig-01"
     },
     "domainName": {
       "type": "string",
       "metadata": {
         "description": "The FQDN of the new AD domain."
       },
-      "defaultValue": "corp.contoso.com"
+      "defaultValue": "corp.xtrlabs.eu"
     },
     "serverOS": {
       "type": "string",
@@ -30,7 +30,8 @@
       "type": "string",
       "metadata": {
         "description": "The name of the domain administrator account to create, i.e. globaladmin. This will also be used to create a local admin account on each VMs."
-      }
+      }, 
+      "defaultValue": "labadmin"
     },
     "adminPassword": {
       "type": "securestring",
@@ -46,7 +47,7 @@
       "metadata": {
         "description": "Choose 'No' to deploy no client VM, or 'Yes' if you want to deploy a client VM from a custom generalized VHD that you have uploaded to an accessible storage account."
       },
-      "defaultValue": "Yes"
+      "defaultValue": "No"
     },
     "clientVhdUri": {
       "type": "string",
@@ -60,7 +61,8 @@
       "metadata": {
         "description": "Select a VM size for all VMs in your deployment."
       },
-      "defaultValue": "Standard_DS2_v2"
+      "allowedValues": ["Standard_B2s", "Standard_B2ms", "Standard_DS1_v2", "Standard_D2s_v3"],
+      "defaultValue": "Standard_B2ms"
     },
     "dnsLabelPrefix": {
       "type": "string",
@@ -73,7 +75,7 @@
       "metadata": {
         "description": "Auto-generated container in staging storage account to receive post-build staging folder upload."
       },
-      "defaultValue": "https://raw.githubusercontent.com/maxskunkworks/tlg/master/tlg-base-config_3-vm"
+      "defaultValue": "https://raw.githubusercontent.com/ecstrim/lab-adds-simple/master"
     },
     "_artifactsLocationSasToken": {
       "type": "securestring",
