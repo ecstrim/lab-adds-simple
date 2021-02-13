@@ -143,17 +143,17 @@
       "tags": {
         "displayName": "NSG - Front End"
       },
-      "comments": "This network security group enables RDP on port 3389.",
+      "comments": "This network security group enables RDP on port 3389 for specific IP address.",
       "properties": {
         "securityRules": [
           {
             "name": "rdp-rule",
             "properties": {
-              "description": "Allow RDP",
+              "description": "Allow my RDP",
               "protocol": "Tcp",
               "sourcePortRange": "*",
               "destinationPortRange": "3389",
-              "sourceAddressPrefix": "Internet",
+              "sourceAddressPrefix": "93.39.149.48/32",
               "destinationAddressPrefix": "*",
               "access": "Allow",
               "priority": 100,
